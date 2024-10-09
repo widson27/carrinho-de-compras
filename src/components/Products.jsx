@@ -10,7 +10,7 @@ function Products() {
 
   useEffect(() => {
 
-    fetchProducts('celular').then((response) => {
+    fetchProducts().then((response) => {
       setProducts(response)
       setLoading(false)
     });
