@@ -9,7 +9,7 @@ function Cart() {
   const totalPrice = cartItems.reduce((acc, item) => item.price + acc, 0);
 
   return (
-    <section className={`flex flex-col justify-between w-full max-w-[330px] bg-white h-screen fixed top-0 right-0 pt-[100px] px-[20px] pb-[20px] translate-x-[0] translate-y-[0] transition-all duration-[400ms] ease-[ease] ${isCartVisible && "translate-x-[0]"}`}>
+    <section className={`flex flex-col justify-between w-full max-w-[330px] bg-white h-screen fixed top-0 right-0 pt-[100px] px-[20px] pb-[20px] translate-x-[110%] translate-y-[0] transition-all duration-[400ms] ease-[ease] ${isCartVisible && "translate-x-[0]"}`}>
       <div className="flex-grow overflow-auto">
         {cartItems.map((cartItem) => <CartItem className='' key={cartItem.id} data={cartItem} />)}
       </div>
