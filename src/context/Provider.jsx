@@ -6,7 +6,7 @@ function Provider({ children }) {
   const [products, setProducts] = useState([])
   const [cartItems, setCartItems] = useState([])
   const [loading, setLoading] = useState(true)
-  const [isCartVisible, setIsCartVisible] = useState(false)
+  const [isCartVisible, setIsCartVisible] = useState(true)
   const [isRepet, setIsRepet] = useState(false)
   const [repetItems, setRepetItems] = useState([])
 
