@@ -6,7 +6,7 @@ import formatCurrency from "../utils/formatCurrency";
 function Cart() {
   const { cartItems, isCartVisible } = useContext(AppContext)
 
-  const totalPrice = cartItems.reduce((acc, item) => item.price + acc, 0);
+  const totalPrice = cartItems.reduce((acc, item) => item.price * item.quantity + acc, 0);
 
   return (
     <section className={`flex flex-col justify-between w-full max-w-[330px] bg-white h-screen fixed top-0 right-0 pt-[100px] px-[20px] pb-[20px] translate-x-[0] translate-y-[0] transition-all duration-[400ms] ease-[ease] ${isCartVisible && "translate-x-[110%]"}`}>
