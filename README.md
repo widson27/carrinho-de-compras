@@ -17,3 +17,5 @@ Este projeto é uma aplicação de e-commerce desenvolvida com **React + Vite**,
 - **Context API**  
 - **Fetch API**  
 - **Tailwind CSS**  
+
+### link do projeto: https://carrinho-de-compras-plum-eight.vercel.app/
