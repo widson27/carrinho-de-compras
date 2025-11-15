@@ -10,8 +10,10 @@ function Products() {
   useEffect(() => {
     const loadProducts = async () => {
       setLoading(true);
-      const response = await fetchProducts("celular");
+
+      const response = await fetchProducts();
       setProducts(response);
+
       setLoading(false);
     };
 

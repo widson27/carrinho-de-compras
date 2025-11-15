@@ -5,7 +5,7 @@ import { useContext } from "react";
 import AppContext from "../context/AppContext";
 
 function ProductCard({ data }) {
-  const { price, title, thumbnail } = data;
+  const { price, title, image } = data;
 
   const { cartItems, setCartItems } = useContext(AppContext)
 
@@ -28,7 +28,7 @@ function ProductCard({ data }) {
 
   return (
     <section className="group w-full max-w-[300px] bg-[#fff] flex flex-col cursor-pointer my-0 mx-auto relative hover:shadow-xl ">
-      <img className="w-full" src={thumbnail.replace(/\w\.jpg/gi, 'W.jpg')} alt="product" />
+      <img className="w-full" src={image} alt={title} />
       <div className="p-5 border-solid border-t border-[#ddd]">
         <h2 className="text-3xl font-normal block mb-[10px]">{formatCurrency(price, "BRL")}</h2>
         <h2 className="text-[15px] text-[rgba(0,0,0,0.5)] font-medium leading-[1.5] ">{title}</h2>
