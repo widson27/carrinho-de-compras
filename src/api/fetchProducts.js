@@ -1,8 +1,18 @@
 const fetchProducts = async (query) => {
-  const response = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${query}`)
-  const data = await response.json()
+  try {
+    const response = await fetch(`/ml-api/sites/MLB/search?q=${query}`);
 
-  return data.results;
-}
+    if (!response.ok) {
+      console.error("Erro ao buscar produtos. Status:", response.status);
+      return []; // evita quebrar o map
+    }
+
+    const data = await response.json();
+    return data.results || [];
+  } catch (error) {
+    console.error("Erro na requisição:", error);
+    return []; // fallback seguro
+  }
+};
 
 export default fetchProducts;
